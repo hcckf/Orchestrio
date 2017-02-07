@@ -4,9 +4,10 @@
   "description": "Single page app to enable collaborative music creation and editing",
   "main": "index.js",
   "scripts": {
-    "start": "echo \"Starting Orchestrio Server\" && node_modules/.bin/babel-node --presets 'react,es2015' app/server.js",
-    "start-dev": "node_modules/.bin/webpack-dev-server --progress --inline --hot --open",
-    "build": "node_modules/.bin/webpack -p"
+    "start": "SET NODE_ENV=production && webpack -p | node_modules/.bin/babel-node --presets 'react,es2015' app/server.js",
+    "start-dev": "npm run start-dev-hmr",
+    "start-dev-hmr": "SET NODE_ENV=production & webpack-dev-server --progress --inline --hot --open",
+    "build": "SET NODE_ENV=production && webpack -p"
   },
   "author": "",
   "license": "ISC",
