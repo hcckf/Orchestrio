@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+	<!--Stuff for G-Sign-In-->
+	<meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="177846993261-4igmehvrh435lml71thvsrrjnvo8qmlf.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+	<!--End Stuff for G-Sign-In-->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orchestrio</title>
@@ -9,5 +14,29 @@
   <body>
     <div id="main"></div>
     <script src="/js/bundle.js"></script>
+	
+	<!--G-Sign-In button test-->
+	<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <script>
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
+
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      };
+	</script>
+	<br>
+	<script>
+	  function signedIn(googleUser) {
+	    
+	  }
   </body>
 </html>
