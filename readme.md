@@ -7,6 +7,8 @@ The following commands only need to be run ONCE:
 
  To start the server run the following commands in the code directory:
 ```
+ cd Documents\Github\Orchestrio
+
  node_modules/.bin/webpack -p
 
  node_modules/.bin/babel-node --presets 'react,es2015' app/server.js

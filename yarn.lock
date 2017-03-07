@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@types/react@*":
+  version "15.0.12"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-15.0.12.tgz#aea95e45631bd745be45d65c2dc02327848212f2"
+
 abbrev@1:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.0.9.tgz#91b4792588a7738c25f35dd6f63752a2f8776135"
@@ -3099,6 +3103,16 @@ react-dom@^15.4.2:
     fbjs "^0.8.1"
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
+
+react-google-login-component@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/react-google-login-component/-/react-google-login-component-0.5.2.tgz#c55403cc59477036cba6d6f1bfc6ee0e3a979cd2"
+
+react-google-login@^2.8.2:
+  version "2.8.2"
+  resolved "https://registry.yarnpkg.com/react-google-login/-/react-google-login-2.8.2.tgz#61ad71c3e65e07df2f818ffca1bfa156e072b972"
+  dependencies:
+    "@types/react" "*"
 
 react-loader@^2.4.0:
   version "2.4.0"
